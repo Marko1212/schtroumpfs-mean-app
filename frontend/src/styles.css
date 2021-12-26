@@ -1,0 +1,61 @@
+body {
+  background-color: #263238;
+}
+
+app-root {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+app-signup, app-login, app-profile, app-modify-user {
+  margin: auto 0;
+}
+
+app-profile {
+  align-self: center;
+}
+
+input {
+  width: 100%;
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  background: #263238!important;
+  color: white;
+  border-radius: 30px;
+  box-shadow: inset 3px 3px 5px #171e22,
+              inset -3px -3px 5px #263238;
+}
+
+select {
+  width: 100%;
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  background: #263238!important;
+  color: white;
+  border-radius: 30px;
+  box-shadow: inset 3px 3px 5px #171e22,
+              inset -3px -3px 5px #263238;
+}
+
+.required {
+  color: red;
+  padding-left: 10px;
+}
+
+button:disabled {
+  background: lightgrey!important;
+  color: grey!important;
+}
+
+button:disabled:hover {
+  cursor: not-allowed;
+}

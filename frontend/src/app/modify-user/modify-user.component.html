@@ -1,0 +1,44 @@
+<div *ngIf="!loading" class="container">
+  <h2 class="text-white text-center mb-5">Edit profile</h2>
+  <form class="d-flex flex-column" [formGroup]="editForm">
+    <div class="input-group mb-3">
+      <input
+        type="email"
+        placeholder="Email"
+        id="email"
+        formControlName="email"
+      />
+    </div>
+
+    <div class="input-group mb-3">
+      <input
+        type="password"
+        placeholder="Password"
+        aria-label="Password"
+        id="password"
+        formControlName="password"
+      />
+    </div>
+    <div class="input-group mb-3">
+      <select id="role" formControlName="role" aria-label="roles">
+        <option [ngValue]="null">Select a role</option>
+        <option *ngFor="let role of roles" [ngValue]="role">
+          {{ role }}
+        </option>
+      </select>
+    </div>
+
+    <div class="btn-group" role="group">
+      <button
+        class="btn btn-success mx-auto px-5"
+        (click)="onEdit()"
+        [disabled]="editForm.invalid"
+      >
+        Save
+      </button>
+      <button class="btn btn-danger mx-auto px-5" (click)="onCancel()">
+        Cancel
+      </button>
+    </div>
+  </form>
+</div>

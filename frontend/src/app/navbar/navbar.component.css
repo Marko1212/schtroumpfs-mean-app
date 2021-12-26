@@ -1,0 +1,9 @@
+nav {
+  box-shadow: inset 5px -5px 5px #171e22,
+              inset -5px 5px 5px #35464e;
+}
+
+button.nav-link {
+  cursor: pointer;
+  border: none;
+}

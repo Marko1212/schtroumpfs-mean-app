@@ -1,0 +1,23 @@
+<div class="container">
+  <h1 class="text-white mb-5 text-center">Login</h1>
+  <form class="d-flex flex-column" [formGroup]="loginForm">
+    <div class="input-group mb-3">
+      <input type="email" placeholder="Email" aria-label="Email" id="email"
+             formControlName="email" required>
+      <div class="required "*ngIf="f.email.invalid && (f.email.dirty || f.email.touched)">
+         Please enter a valid email.
+      </div>
+    </div>
+
+    <div class="input-group mb-3">
+      <input type="password" placeholder="Password" aria-label="Password" id="password" formControlName="password" required>
+    </div>
+
+    <button class="btn-info mx-auto px-5 py-2" (click)="onSubmit()" [disabled]="loginForm.invalid">Login</button>
+    <p class="text-danger mt-2 text-center">{{ errorMessage }}</p>
+    <span class="text-light mx-auto mt-5">
+      Not a member ?
+      <a class="text-info" [routerLink]="['/signup']">Sign up now !</a>
+    </span>
+  </form>
+</div>

@@ -1,0 +1,51 @@
+<nav class="navbar navbar-expand-md navbar-dark">
+  <div>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target=".dual-collapse2"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+  <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['/']">Home</a>
+      </li>
+    </ul>
+  </div>
+  <div class="mx-auto order-0">
+    <a class="navbar-brand mx-auto" routerLink="">Schtroumpfs</a>
+  </div>
+  <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+    <ul *ngIf="!isAuth; else userInfos" class="navbar-nav ml-auto">
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['/signup']">Sign Up</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['/login']">Login</a>
+      </li>
+    </ul>
+    <ng-template #userInfos>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" [href]="'mailto:' + loggedInUserEmail">{{
+            loggedInUserEmail
+          }}</a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <button class="nav-link btn btn-link" (click)="profile()">
+            Profile
+          </button>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <button class="nav-link btn btn-link" (click)="onLogout()">
+            Logout
+          </button>
+        </li>
+      </ul>
+    </ng-template>
+  </div>
+</nav>

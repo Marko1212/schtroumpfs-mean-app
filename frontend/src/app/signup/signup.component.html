@@ -1,0 +1,61 @@
+<div class="container">
+  <h2 class="text-white text-center mb-5">Sign Up</h2>
+  <form class="d-flex flex-column" [formGroup]="signupForm">
+    <div class="input-group mb-3">
+      <span class="required">*</span>
+      <input
+        type="email"
+        placeholder="Email"
+        aria-label="Email"
+        id="email"
+        formControlName="email"
+        required
+      />
+      <div
+        class="required"
+        *ngIf="f.email.invalid && (f.email.dirty || f.email.touched)"
+      >
+        Please enter a valid email.
+      </div>
+    </div>
+
+    <div class="input-group mb-3">
+      <span class="required">*</span>
+      <input
+        type="password"
+        placeholder="Password"
+        aria-label="Password"
+        id="password"
+        formControlName="password"
+        required
+      />
+      <div
+        class="required"
+        *ngIf="f.password.invalid && (f.password.dirty || f.password.touched)"
+      >
+        Password must be at least 8 characters long.
+      </div>
+    </div>
+
+    <div class="input-group mb-3">
+      <select id="role" formControlName="role" aria-label="roles">
+        <option [ngValue]="null">Select a role</option>
+        <option *ngFor="let role of roles" [ngValue]="role">
+          {{ role }}
+        </option>
+      </select>
+    </div>
+    <span class="required ml-auto">* (required)</span>
+    <button
+      class="btn-success mx-auto px-5"
+      (click)="onSignup()"
+      [disabled]="signupForm.invalid"
+    >
+      Sign up
+    </button>
+    <p class="text-danger mt-2 text-center">{{ errorMessage }}</p>
+    <a class="text-info mx-auto mt-5" [routerLink]="['/login']"
+      >Already have an account ?</a
+    >
+  </form>
+</div>

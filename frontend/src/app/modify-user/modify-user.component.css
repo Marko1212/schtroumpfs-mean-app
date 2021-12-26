@@ -1,0 +1,19 @@
+.container {
+  box-shadow: inset 5px -5px 5px #171e22,
+              inset -5px 5px 5px #35464e;
+  padding: 50px;
+  border-radius: 40px;
+}
+
+.btn-group {
+  box-shadow: 2px 2px 2px #171e22,
+    -2px -2px 2px #263238;
+}
+
+.btn-group button {
+  border: none;
+}
+
+input:disabled {
+  color: grey;
+}

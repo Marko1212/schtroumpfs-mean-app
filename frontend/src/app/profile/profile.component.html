@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Schtroumpf Profile</h5>
+      <p class="card-text">Personal informations :</p>
+    </div>
+    <div class="card-body">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Email : <span class="font-weight-bold">{{ email }}</span></li>
+        <li class="list-group-item">Role : <span class="font-weight-bold">{{ role }}</span></li>
+      </ul>
+    </div>
+    <div class="card-body d-flex">
+      <button *ngIf="isMyProfile" id="editBtn" class="card-link ml-auto btn-warning px-3" (click)="onEdit()">Edit</button>
+    </div>
+  </div>
+</div>

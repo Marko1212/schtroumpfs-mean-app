@@ -1,0 +1,16 @@
+.container {
+  box-shadow: inset 5px -5px 5px #171e22,
+              inset -5px 5px 5px #35464e;
+  padding: 50px;
+  border-radius: 40px;
+}
+
+button {
+  outline: none;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  box-shadow: 3px 3px 5px #171e22,
+              -3px -3px 5px #263238;
+}

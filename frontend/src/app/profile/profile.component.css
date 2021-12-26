@@ -1,0 +1,23 @@
+* {
+  color: white;
+}
+
+.card, .card li {
+  background-color: #263238;
+}
+
+.card {
+  min-width: 40vw;
+  box-shadow: inset 5px -5px 5px #171e22,
+              inset -5px 5px 5px #35464e;
+}
+
+ button {
+   color: black;
+   width: 100px;
+   outline: none;
+   border: none;
+   border-radius: 10px;
+   box-shadow: 2px 2px 2px #171e22,
+     -2px -2px 2px #263238;
+ }
